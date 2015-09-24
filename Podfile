@@ -5,7 +5,9 @@ use_frameworks!
 target 'Walcott' do
   pod 'Realm', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'swift-2.0'
   pod 'RealmSwift', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'swift-2.0'
-  pod 'RxSwift'
+  pod 'RxSwift', '~> 2.0.0-alpha'
+  pod 'RxCocoa', '~> 2.0.0-alpha'
+  pod 'RxBlocking', '~> 2.0.0-alpha'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
