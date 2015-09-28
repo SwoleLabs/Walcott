@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -24,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-
+        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -33,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         FBSDKAppEvents.activateApp()
+
+        if (FBSDKAccessToken.currentAccessToken().userID == nil) {
+            self.window!.rootViewController = UIStoryboard(name: "Setup", bundle: NSBundle.mainBundle()).instantiateInitialViewController()
+        } else {
+            self.window!.rootViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateInitialViewController()
+        }
     }
 
     func applicationWillTerminate(application: UIApplication) {
