@@ -8,9 +8,11 @@
 
 import WatchKit
 import Foundation
-
+import HealthKit
 
 class InterfaceController: WKInterfaceController {
+    
+    let healthStore = HKHealthStore()
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -28,4 +30,9 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    // MARK: - IB Actions
+    @IBAction func startWorkoutButtonWasPressed() {
+        let workout = HKWorkoutSession(activityType: .FunctionalStrengthTraining, locationType: .Indoor)
+        healthStore.startWorkoutSession(workout)
+    }
 }
