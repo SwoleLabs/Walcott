@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class ViewController: UIViewController {
 
@@ -39,17 +40,17 @@ class ViewController: UIViewController {
             HKCharacteristicTypeIdentifierBloodType)
         
         let dataTypesToRead = NSSet(objects:
-            dateOfBirthCharacteristic,
-            biologicalSexCharacteristic,
-            bloodTypeCharacteristic)
+            dateOfBirthCharacteristic!,
+            biologicalSexCharacteristic!,
+            bloodTypeCharacteristic!)
         
         healthStore?.requestAuthorizationToShareTypes(nil,
-            readTypes: dataTypesToRead,
+            readTypes: dataTypesToRead as! Set<HKObjectType>,
             completion: { (success, error) -> Void in
                 if success {
-                    println("success")
+                    print("success")
                 } else {
-                    println(error.description)
+                    print(error!.description)
                 }
         })
         

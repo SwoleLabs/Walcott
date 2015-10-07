@@ -3,8 +3,8 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Walcott' do
-  pod 'Realm', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'swift-2.0'
-  pod 'RealmSwift', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'swift-2.0'
+  pod 'Realm'
+  pod 'RealmSwift'
   pod 'RxSwift', '~> 2.0.0-alpha'
   pod 'RxCocoa', '~> 2.0.0-alpha'
   pod 'RxBlocking', '~> 2.0.0-alpha'
