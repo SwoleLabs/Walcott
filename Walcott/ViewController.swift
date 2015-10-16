@@ -28,31 +28,6 @@ class ViewController: UIViewController {
             } else {
                 return nil
             }
-            }()
-        
-        let dateOfBirthCharacteristic = HKCharacteristicType.characteristicTypeForIdentifier(
-            HKCharacteristicTypeIdentifierDateOfBirth)
-        
-        let biologicalSexCharacteristic = HKCharacteristicType.characteristicTypeForIdentifier(
-            HKCharacteristicTypeIdentifierBiologicalSex)
-        
-        let bloodTypeCharacteristic = HKCharacteristicType.characteristicTypeForIdentifier(
-            HKCharacteristicTypeIdentifierBloodType)
-        
-        let dataTypesToRead = NSSet(objects:
-            dateOfBirthCharacteristic!,
-            biologicalSexCharacteristic!,
-            bloodTypeCharacteristic!)
-        
-        healthStore?.requestAuthorizationToShareTypes(nil,
-            readTypes: dataTypesToRead as! Set<HKObjectType>,
-            completion: { (success, error) -> Void in
-                if success {
-                    print("success")
-                } else {
-                    print(error!.description)
-                }
-        })
-        
+        }()
     }
 }
