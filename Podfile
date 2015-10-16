@@ -3,14 +3,11 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Walcott' do
-  pod 'Realm'
-  pod 'RealmSwift'
-  pod 'RxSwift', '~> 2.0.0-alpha'
-  pod 'RxCocoa', '~> 2.0.0-alpha'
-  pod 'RxBlocking', '~> 2.0.0-alpha'
-  pod 'FBSDKCoreKit'
-  pod 'FBSDKLoginKit'
-  pod 'FBSDKShareKit'
+  pod 'Realm', '~> 0.96.0'
+  pod 'RealmSwift', '~> 0.96.0'
+  pod 'FBSDKCoreKit', '~> 4.7.0'
+  pod 'FBSDKLoginKit', '~> 4.7.0'
+  pod 'FBSDKShareKit', '~> 4.7.0'
 end
 
 target 'WalcottTests' do
