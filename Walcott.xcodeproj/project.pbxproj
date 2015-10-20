@@ -30,6 +30,7 @@
 		635801FC1BD198BE00FB6C87 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801FA1BD198BE00FB6C87 /* Exercise.swift */; };
 		635801FE1BD1992300FB6C87 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801FD1BD1992300FB6C87 /* Workout.swift */; };
 		635801FF1BD1992300FB6C87 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801FD1BD1992300FB6C87 /* Workout.swift */; };
+		637525AD1BD6E02A009BA56D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637525AC1BD6E02A009BA56D /* HealthKit.framework */; };
 		92C38F35DC22C81F5777C7AD /* Pods_Walcott.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C1D88DEB0F02D13DB5A82A /* Pods_Walcott.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,8 @@
 		6334DBDA1BB4767D002CBA55 /* Setup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
 		635801FA1BD198BE00FB6C87 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		635801FD1BD1992300FB6C87 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		637525AB1BD6E02A009BA56D /* Walcott WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Walcott WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		637525AC1BD6E02A009BA56D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		A5C1D88DEB0F02D13DB5A82A /* Pods_Walcott.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walcott.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F7A5AE07F19BC5D8A453D /* Pods-Walcott.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walcott.release.xcconfig"; path = "Pods/Target Support Files/Pods-Walcott/Pods-Walcott.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637525AD1BD6E02A009BA56D /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +174,7 @@
 		50911C15E89F0BF1A8D834D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				637525AC1BD6E02A009BA56D /* HealthKit.framework */,
 				A5C1D88DEB0F02D13DB5A82A /* Pods_Walcott.framework */,
 			);
 			name = Frameworks;
@@ -243,6 +248,7 @@
 		6309EBAC1BB08B2300BEC2D6 /* Walcott WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				637525AB1BD6E02A009BA56D /* Walcott WatchKit Extension.entitlements */,
 				6309EBAF1BB08B2300BEC2D6 /* InterfaceController.swift */,
 				6309EBB11BB08B2300BEC2D6 /* ExtensionDelegate.swift */,
 				6309EBB31BB08B2300BEC2D6 /* NotificationController.swift */,
@@ -422,6 +428,12 @@
 					};
 					6309EBA71BB08B2300BEC2D6 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = H98X6Z55WK;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -720,6 +732,7 @@
 		6309EBBB1BB08B2300BEC2D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Walcott WatchKit Extension/Walcott WatchKit Extension.entitlements";
 				INFOPLIST_FILE = "Walcott WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DavidBarsky.Walcott.watchkitapp.watchkitextension;
@@ -734,6 +747,7 @@
 		6309EBBC1BB08B2300BEC2D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Walcott WatchKit Extension/Walcott WatchKit Extension.entitlements";
 				INFOPLIST_FILE = "Walcott WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DavidBarsky.Walcott.watchkitapp.watchkitextension;

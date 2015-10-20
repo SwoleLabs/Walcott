@@ -10,29 +10,71 @@ import WatchKit
 import Foundation
 import HealthKit
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     
     let healthStore = HKHealthStore()
-
+    let workoutSession = HKWorkoutSession(activityType: .TraditionalStrengthTraining, locationType: .Indoor)
+    
+    // MARK:- Lifecycle
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        workoutSession.delegate = self
         
         // Configure interface objects here.
     }
-
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        let writeableDataTypes: Set<HKSampleType>
+        let readableDataTypes: Set<HKSampleType>
+        
+        guard HKHealthStore.isHealthDataAvailable() == true else {
+            print("HealthKit is not availible.")
+            return
+        }
     }
-
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
-    // MARK: - IB Actions
+    
+    // MARK:- Workout Code
+    func workoutSession(workoutSession: HKWorkoutSession, didChangeToState toState: HKWorkoutSessionState, fromState: HKWorkoutSessionState, date: NSDate) {
+        switch toState {
+        case.Running:
+            workoutDidEnd(date)
+        case .Ended:
+            workoutDidEnd(date)
+        default:
+            print("Unexpected state \(toState)")
+        }
+    }
+    
+    func workoutSession(workoutSession: HKWorkoutSession, didFailWithError error: NSError) {
+        print(error)
+    }
+    
+    func workoutDidStart(date: NSDate) {
+        
+    }
+    
+    func workoutDidEnd(date: NSDate) {
+        
+    }
+    
+    // MARK:- HealthKit Permissions
+    func writeableDataTypes() -> Set<HKSampleType> {
+        let heartrateType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)!
+        
+        let writeableDataTypesSet: Set<HKSampleType> = Set(arrayLiteral: heartrateType)
+        return writeableDataTypesSet
+    }
+    
+    // MARK: IB Actions
     @IBAction func startWorkoutButtonWasPressed() {
-        let workout = HKWorkoutSession(activityType: .FunctionalStrengthTraining, locationType: .Indoor)
-        healthStore.startWorkoutSession(workout)
+        healthStore.startWorkoutSession(workoutSession)
     }
 }
