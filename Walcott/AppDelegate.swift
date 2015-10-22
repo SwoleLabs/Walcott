@@ -34,8 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         FBSDKAppEvents.activateApp()
-
-        if (FBSDKAccessToken.currentAccessToken().userID == nil) {
+        
+        if (FBSDKAccessToken.currentAccessToken()?.userID == nil) {
             self.window!.rootViewController = UIStoryboard(name: "Setup", bundle: NSBundle.mainBundle()).instantiateInitialViewController()
         } else {
             self.window!.rootViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateInitialViewController()
