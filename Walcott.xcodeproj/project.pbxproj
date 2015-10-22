@@ -31,6 +31,8 @@
 		635801FE1BD1992300FB6C87 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801FD1BD1992300FB6C87 /* Workout.swift */; };
 		635801FF1BD1992300FB6C87 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801FD1BD1992300FB6C87 /* Workout.swift */; };
 		637525AD1BD6E02A009BA56D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637525AC1BD6E02A009BA56D /* HealthKit.framework */; };
+		637525AF1BD7EDEF009BA56D /* WatchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637525AE1BD7EDEF009BA56D /* WatchDelegate.swift */; };
+		637525B01BD7EDEF009BA56D /* WatchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637525AE1BD7EDEF009BA56D /* WatchDelegate.swift */; };
 		92C38F35DC22C81F5777C7AD /* Pods_Walcott.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C1D88DEB0F02D13DB5A82A /* Pods_Walcott.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,7 @@
 		635801FD1BD1992300FB6C87 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		637525AB1BD6E02A009BA56D /* Walcott WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Walcott WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		637525AC1BD6E02A009BA56D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		637525AE1BD7EDEF009BA56D /* WatchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchDelegate.swift; sourceTree = "<group>"; };
 		A5C1D88DEB0F02D13DB5A82A /* Pods_Walcott.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walcott.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F7A5AE07F19BC5D8A453D /* Pods-Walcott.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walcott.release.xcconfig"; path = "Pods/Target Support Files/Pods-Walcott/Pods-Walcott.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -282,6 +285,7 @@
 				6309EB741BB08B2300BEC2D6 /* AppDelegate.swift */,
 				6309EB761BB08B2300BEC2D6 /* ViewController.swift */,
 				6334DBD71BB47642002CBA55 /* LoginViewController.swift */,
+				637525AE1BD7EDEF009BA56D /* WatchDelegate.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -562,6 +566,7 @@
 				635801FB1BD198BE00FB6C87 /* Exercise.swift in Sources */,
 				6309EB771BB08B2300BEC2D6 /* ViewController.swift in Sources */,
 				635801FE1BD1992300FB6C87 /* Workout.swift in Sources */,
+				637525AF1BD7EDEF009BA56D /* WatchDelegate.swift in Sources */,
 				6309EB751BB08B2300BEC2D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +579,7 @@
 				6309EB8A1BB08B2300BEC2D6 /* WalcottTests.swift in Sources */,
 				635801FC1BD198BE00FB6C87 /* Exercise.swift in Sources */,
 				635801FF1BD1992300FB6C87 /* Workout.swift in Sources */,
+				637525B01BD7EDEF009BA56D /* WatchDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

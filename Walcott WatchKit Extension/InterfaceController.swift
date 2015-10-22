@@ -27,9 +27,6 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        let writeableDataTypes: Set<HKSampleType>
-        let readableDataTypes: Set<HKSampleType>
-        
         guard HKHealthStore.isHealthDataAvailable() == true else {
             print("HealthKit is not availible.")
             return
@@ -45,9 +42,9 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     func workoutSession(workoutSession: HKWorkoutSession, didChangeToState toState: HKWorkoutSessionState, fromState: HKWorkoutSessionState, date: NSDate) {
         switch toState {
         case.Running:
-            workoutDidEnd(date)
+            print("Workout Running")
         case .Ended:
-            workoutDidEnd(date)
+            print("Workout Ended")
         default:
             print("Unexpected state \(toState)")
         }
@@ -57,24 +54,12 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
         print(error)
     }
     
-    func workoutDidStart(date: NSDate) {
-        
-    }
-    
-    func workoutDidEnd(date: NSDate) {
-        
-    }
-    
-    // MARK:- HealthKit Permissions
-    func writeableDataTypes() -> Set<HKSampleType> {
-        let heartrateType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)!
-        
-        let writeableDataTypesSet: Set<HKSampleType> = Set(arrayLiteral: heartrateType)
-        return writeableDataTypesSet
-    }
-    
     // MARK: IB Actions
     @IBAction func startWorkoutButtonWasPressed() {
-        healthStore.startWorkoutSession(workoutSession)
+        healthStore.startWorkoutSession(self.workoutSession)
+    }
+    
+    @IBAction func endWorkoutButtonWasPressed() {
+        healthStore.endWorkoutSession(self.workoutSession)
     }
 }
