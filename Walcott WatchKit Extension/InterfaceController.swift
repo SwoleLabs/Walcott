@@ -57,9 +57,11 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     // MARK: IB Actions
     @IBAction func startWorkoutButtonWasPressed() {
         healthStore.startWorkoutSession(self.workoutSession)
+        
+//    contextForSegueWithIdentifier("WorkoutInterfaceController") {
+//            
+//        }
+        
     }
-    
-    @IBAction func endWorkoutButtonWasPressed() {
-        healthStore.endWorkoutSession(self.workoutSession)
-    }
+
 }
