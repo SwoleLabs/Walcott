@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630944181BD9407500136A56 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630944171BD9407500136A56 /* Interface.storyboard */; };
+		630944191BD9407500136A56 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630944171BD9407500136A56 /* Interface.storyboard */; };
 		6309EB751BB08B2300BEC2D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EB741BB08B2300BEC2D6 /* AppDelegate.swift */; };
 		6309EB771BB08B2300BEC2D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EB761BB08B2300BEC2D6 /* ViewController.swift */; };
 		6309EB7A1BB08B2300BEC2D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6309EB781BB08B2300BEC2D6 /* Main.storyboard */; };
@@ -15,7 +17,6 @@
 		6309EB8A1BB08B2300BEC2D6 /* WalcottTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EB891BB08B2300BEC2D6 /* WalcottTests.swift */; };
 		6309EB951BB08B2300BEC2D6 /* WalcottUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EB941BB08B2300BEC2D6 /* WalcottUITests.swift */; };
 		6309EB9A1BB08B2300BEC2D6 /* Walcott WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6309EB991BB08B2300BEC2D6 /* Walcott WatchKit App.app */; };
-		6309EBA01BB08B2300BEC2D6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6309EB9E1BB08B2300BEC2D6 /* Interface.storyboard */; };
 		6309EBA21BB08B2300BEC2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6309EBA11BB08B2300BEC2D6 /* Assets.xcassets */; };
 		6309EBA91BB08B2300BEC2D6 /* Walcott WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6309EBA81BB08B2300BEC2D6 /* Walcott WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6309EBB01BB08B2300BEC2D6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EBAF1BB08B2300BEC2D6 /* InterfaceController.swift */; };
@@ -94,6 +95,7 @@
 
 /* Begin PBXFileReference section */
 		5ACDCE4E67A2496DFF273957 /* Pods-Walcott.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walcott.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Walcott/Pods-Walcott.debug.xcconfig"; sourceTree = "<group>"; };
+		630944171BD9407500136A56 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		6309EB711BB08B2300BEC2D6 /* Walcott.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walcott.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6309EB741BB08B2300BEC2D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6309EB761BB08B2300BEC2D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +110,6 @@
 		6309EB941BB08B2300BEC2D6 /* WalcottUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalcottUITests.swift; sourceTree = "<group>"; };
 		6309EB961BB08B2300BEC2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6309EB991BB08B2300BEC2D6 /* Walcott WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Walcott WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6309EB9F1BB08B2300BEC2D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		6309EBA11BB08B2300BEC2D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6309EBA31BB08B2300BEC2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6309EBA81BB08B2300BEC2D6 /* Walcott WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Walcott WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,7 +242,7 @@
 		6309EB9D1BB08B2300BEC2D6 /* Walcott WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				6309EB9E1BB08B2300BEC2D6 /* Interface.storyboard */,
+				630944171BD9407500136A56 /* Interface.storyboard */,
 				6309EBA11BB08B2300BEC2D6 /* Assets.xcassets */,
 				6309EBA31BB08B2300BEC2D6 /* Info.plist */,
 			);
@@ -494,8 +495,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630944181BD9407500136A56 /* Interface.storyboard in Resources */,
 				6309EBA21BB08B2300BEC2D6 /* Assets.xcassets in Resources */,
-				6309EBA01BB08B2300BEC2D6 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630944191BD9407500136A56 /* Interface.storyboard in Resources */,
 				6309EBB61BB08B2300BEC2D6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,14 +643,6 @@
 				6309EB7E1BB08B2300BEC2D6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		6309EB9E1BB08B2300BEC2D6 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6309EB9F1BB08B2300BEC2D6 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

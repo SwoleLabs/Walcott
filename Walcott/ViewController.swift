@@ -24,29 +24,26 @@ class ViewController: UIViewController {
     }
     
     // MARK:- HealthKit Permissions
-    func writeableDataTypes() -> Set<HKSampleType> {
-        let activeBurnType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierActiveEnergyBurned)!
-        let restingBurnType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBasalEnergyBurned)!
-        
-        let writeableDataTypes = Set(value: [activeBurnType, restingBurnType])
-        return writeableDataTypes
-    }
-    
-    func readableDateTypes() -> Set? {
+    @IBAction func authorizeHealthKit(sender: UIButton) {
+        // readable
         let height = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)!
         let weight = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
         let birthday = HKObjectType.characteristicTypeForIdentifier(HKCharacteristicTypeIdentifierDateOfBirth)!
         let sex = HKObjectType.characteristicTypeForIdentifier(HKCharacteristicTypeIdentifierBiologicalSex)!
-        
         let readableDataTypes = Set(value: [height, weight, birthday, sex])
         
-        return readableDataTypes
-    }
-    
-    @IBAction func authorizeHealthKit(sender: UIButton) {
-        let writeableDataTypes: Set<HKSampleType> = self.writeableDataTypes()
-        let readableDataTypes? = self.writeableDataTypes()
+        // shareable
+        let activeBurnType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierActiveEnergyBurned)!
+        let restingBurnType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBasalEnergyBurned)!
         
-        healthStore.requestAuthorizationToShareTypes(<#T##typesToShare: Set<HKSampleType>?##Set<HKSampleType>?#>, readTypes: <#T##Set<HKObjectType>?#>, completion: <#T##(Bool, NSError?) -> Void#>)
+        let shareableDataTypes = Set(value: [activeBurnType, restingBurnType])
+
+        healthStore.requestAuthorizationToShareTypes(shareableDataTypes, readTypes: readableDataTypes) { (success, error) -> Void in
+            if success {
+                print("Success!")
+            } else {
+                print("Failure!")
+            }
+        }
     }
 }
