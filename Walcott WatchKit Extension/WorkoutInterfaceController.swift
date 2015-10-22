@@ -10,10 +10,15 @@ import WatchKit
 import HealthKit
 
 
-class WorkoutInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
+class WorkoutInterfaceController: WKInterfaceController {
     
+    let healthStore = HKHealthStore()
+    var workoutSession: HKWorkoutSession
     
-
+    init(workoutSession: HKWorkoutSession) {
+        self.workoutSession = workoutSession
+    }
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         

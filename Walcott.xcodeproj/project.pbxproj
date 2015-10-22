@@ -25,7 +25,6 @@
 		6309EBB61BB08B2300BEC2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6309EBB51BB08B2300BEC2D6 /* Assets.xcassets */; };
 		6310DEF81BD945AB00BA4E0C /* WorkoutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6310DEF71BD945AB00BA4E0C /* WorkoutInterfaceController.swift */; };
 		6334DBD81BB47642002CBA55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334DBD71BB47642002CBA55 /* LoginViewController.swift */; };
-		6334DBD91BB47642002CBA55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334DBD71BB47642002CBA55 /* LoginViewController.swift */; };
 		6334DBDB1BB4767D002CBA55 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334DBDA1BB4767D002CBA55 /* Setup.storyboard */; };
 		6334DBDC1BB4767D002CBA55 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334DBDA1BB4767D002CBA55 /* Setup.storyboard */; };
 		635801FB1BD198BE00FB6C87 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801FA1BD198BE00FB6C87 /* Exercise.swift */; };
@@ -258,10 +257,10 @@
 				6309EBAF1BB08B2300BEC2D6 /* InterfaceController.swift */,
 				6309EBB11BB08B2300BEC2D6 /* ExtensionDelegate.swift */,
 				6309EBB31BB08B2300BEC2D6 /* NotificationController.swift */,
+				6310DEF71BD945AB00BA4E0C /* WorkoutInterfaceController.swift */,
 				6309EBB51BB08B2300BEC2D6 /* Assets.xcassets */,
 				6309EBB71BB08B2300BEC2D6 /* Info.plist */,
 				6309EBAD1BB08B2300BEC2D6 /* Supporting Files */,
-				6310DEF71BD945AB00BA4E0C /* WorkoutInterfaceController.swift */,
 			);
 			path = "Walcott WatchKit Extension";
 			sourceTree = "<group>";
@@ -329,6 +328,7 @@
 				6309EBC11BB08B2300BEC2D6 /* Embed Watch Content */,
 				588EF04D9B218AECD77DA764 /* Embed Pods Frameworks */,
 				E8330E690C51E44C5F83EB6F /* Copy Pods Resources */,
+				638C0DCF1BD971000090267A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -530,6 +530,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Walcott/Pods-Walcott-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		638C0DCF1BD971000090267A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		66B481D3E10242CF76C086A1 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -580,7 +593,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6334DBD91BB47642002CBA55 /* LoginViewController.swift in Sources */,
 				6309EB8A1BB08B2300BEC2D6 /* WalcottTests.swift in Sources */,
 				635801FC1BD198BE00FB6C87 /* Exercise.swift in Sources */,
 				635801FF1BD1992300FB6C87 /* Workout.swift in Sources */,

@@ -38,12 +38,6 @@ class ViewController: UIViewController {
         
         let shareableDataTypes = Set(value: [activeBurnType, restingBurnType])
 
-        healthStore.requestAuthorizationToShareTypes(shareableDataTypes, readTypes: readableDataTypes) { (success, error) -> Void in
-            if success {
-                print("Success!")
-            } else {
-                print("Failure!")
-            }
-        }
+        healthStore
     }
 }
