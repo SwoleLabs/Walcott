@@ -10,10 +10,10 @@ import WatchKit
 import HealthKit
 
 
-class WorkoutInterfaceController: WKInterfaceController {
+class WorkoutInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     
     let healthStore = HKHealthStore()
-    var workoutSession: HKWorkoutSession
+    var workoutSession = HKWorkoutSession(activityType: .TraditionalStrengthTraining, locationType: .Indoor)
     
     init(workoutSession: HKWorkoutSession) {
         self.workoutSession = workoutSession
@@ -21,6 +21,7 @@ class WorkoutInterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        workoutSession.delegate = self
         
         // Configure interface objects here.
     }
@@ -28,6 +29,26 @@ class WorkoutInterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        guard HKHealthStore.isHealthDataAvailable() == true else {
+            print("HealthKit is not availible.")
+            return
+        }
+    }
+    
+    func workoutSession(workoutSession: HKWorkoutSession, didChangeToState toState: HKWorkoutSessionState, fromState: HKWorkoutSessionState, date: NSDate) {
+        switch toState {
+        case.Running:
+            print("Workout Running")
+        case .Ended:
+            print("Workout Ended")
+        default:
+            print("Unexpected state \(toState)")
+        }
+    }
+    
+    func workoutSession(workoutSession: HKWorkoutSession, didFailWithError error: NSError) {
+        print(error)
     }
 
     override func didDeactivate() {
