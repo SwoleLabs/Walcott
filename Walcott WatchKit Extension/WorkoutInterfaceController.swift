@@ -15,6 +15,8 @@ class WorkoutInterfaceController: WKInterfaceController, HKWorkoutSessionDelegat
     let healthStore = HKHealthStore()
     var workoutSession = HKWorkoutSession(activityType: .TraditionalStrengthTraining, locationType: .Indoor)
     
+    @IBOutlet var heartRate: WKInterfaceLabel!
+    @IBOutlet var timer: WKInterfaceTimer!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         workoutSession.delegate = self
@@ -24,10 +26,13 @@ class WorkoutInterfaceController: WKInterfaceController, HKWorkoutSessionDelegat
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
+        timer.start();
+        
         guard HKHealthStore.isHealthDataAvailable() == true else {
             print("HealthKit is not availible.")
             return
         }
+        
     }
     
     func workoutSession(workoutSession: HKWorkoutSession, didChangeToState toState: HKWorkoutSessionState, fromState: HKWorkoutSessionState, date: NSDate) {
@@ -52,6 +57,7 @@ class WorkoutInterfaceController: WKInterfaceController, HKWorkoutSessionDelegat
     
 
     @IBAction func endWorkoutButtonWasPressed() {
+        timer.stop()
         healthStore.endWorkoutSession(self.workoutSession)
     }
 

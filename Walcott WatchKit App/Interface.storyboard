@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kb0-kc-KlG">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kb0-kc-KlG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
@@ -30,7 +30,13 @@
                                 <action selector="endWorkoutButtonWasPressed" destination="LgL-GM-EVp" id="qwj-1o-4I7"/>
                             </connections>
                         </button>
+                        <label width="79" height="69.5" alignment="left" text="Heart Rate" id="2xA-qe-N5p"/>
+                        <timer width="136" height="29.5" alignment="left" id="zaL-Rc-tea"/>
                     </items>
+                    <connections>
+                        <outlet property="heartRate" destination="2xA-qe-N5p" id="Yl3-Ji-YXX"/>
+                        <outlet property="timer" destination="zaL-Rc-tea" id="EyF-f5-aZJ"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="397" y="107"/>
