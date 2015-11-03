@@ -8,8 +8,11 @@
 
 import WatchKit
 import Foundation
+import HealthKit
 
 class StartWorkoutController: WKInterfaceController {
+    
+    let healthStore = HKHealthStore()
     
     // MARK:- Lifecycle
     override func awakeWithContext(context: AnyObject?) {
@@ -21,6 +24,17 @@ class StartWorkoutController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        let typesToShare = Set([HKObjectType.workoutType()])
+        
+        let typesToRead = Set([
+            HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierActiveEnergyBurned)!,
+            HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)!,
+            ])
+        
+        self.healthStore.requestAuthorizationToShareTypes(typesToShare, readTypes: typesToRead) { success, error in
+            //..do something maybe?
+        }
     }
     
     override func didDeactivate() {

@@ -8,17 +8,27 @@
 
 import UIKit
 import FBSDKCoreKit
+import HealthKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let healthStore = HKHealthStore()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         //WatchSessionManager.sharedManager.startSession()
 
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+    
+    //prompts user to allow access to healthkit info
+    func applicationShouldRequestHealthAuthorization(application: UIApplication) {
+        self.healthStore.handleAuthorizationForExtensionWithCompletion { success, error in
+            
+        }
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
