@@ -9,7 +9,7 @@
 import WatchKit
 import Foundation
 
-class InterfaceController: WKInterfaceController {
+class StartWorkoutController: WKInterfaceController {
     
     // MARK:- Lifecycle
     override func awakeWithContext(context: AnyObject?) {

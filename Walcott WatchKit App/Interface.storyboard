@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kb0-kc-KlG">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kb0-kc-KlG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Start Workout Controller-->
         <scene sceneID="Ibk-T6-6Ev">
             <objects>
-                <controller id="Kb0-kc-KlG" customClass="InterfaceController" customModule="Walcott_WatchKit_Extension">
+                <controller id="Kb0-kc-KlG" customClass="StartWorkoutController" customModule="Walcott_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="left" title="Start" id="ePS-xs-Rua">
+                        <button width="1" alignment="left" verticalAlignment="center" title="Start" id="ePS-xs-Rua">
                             <connections>
-                                <segue destination="LgL-GM-EVp" kind="modal" id="H0g-Ls-rZw"/>
+                                <segue destination="LgL-GM-EVp" kind="push" id="H0g-Ls-rZw"/>
                             </connections>
                         </button>
                     </items>
@@ -25,7 +25,7 @@
             <objects>
                 <controller identifier="WorkoutInterfaceController" id="LgL-GM-EVp" customClass="WorkoutInterfaceController" customModule="Walcott_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="left" title="Finish" id="Nve-Nl-Wfo">
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Finish" id="Nve-Nl-Wfo">
                             <connections>
                                 <action selector="endWorkoutButtonWasPressed" destination="LgL-GM-EVp" id="qwj-1o-4I7"/>
                             </connections>

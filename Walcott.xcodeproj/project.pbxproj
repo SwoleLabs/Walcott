@@ -19,7 +19,7 @@
 		6309EB9A1BB08B2300BEC2D6 /* Walcott WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6309EB991BB08B2300BEC2D6 /* Walcott WatchKit App.app */; };
 		6309EBA21BB08B2300BEC2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6309EBA11BB08B2300BEC2D6 /* Assets.xcassets */; };
 		6309EBA91BB08B2300BEC2D6 /* Walcott WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6309EBA81BB08B2300BEC2D6 /* Walcott WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6309EBB01BB08B2300BEC2D6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EBAF1BB08B2300BEC2D6 /* InterfaceController.swift */; };
+		6309EBB01BB08B2300BEC2D6 /* StartWorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EBAF1BB08B2300BEC2D6 /* StartWorkoutController.swift */; };
 		6309EBB21BB08B2300BEC2D6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EBB11BB08B2300BEC2D6 /* ExtensionDelegate.swift */; };
 		6309EBB41BB08B2300BEC2D6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EBB31BB08B2300BEC2D6 /* NotificationController.swift */; };
 		6309EBB61BB08B2300BEC2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6309EBB51BB08B2300BEC2D6 /* Assets.xcassets */; };
@@ -112,7 +112,7 @@
 		6309EBA31BB08B2300BEC2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6309EBA81BB08B2300BEC2D6 /* Walcott WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Walcott WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6309EBAE1BB08B2300BEC2D6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		6309EBAF1BB08B2300BEC2D6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		6309EBAF1BB08B2300BEC2D6 /* StartWorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutController.swift; sourceTree = "<group>"; };
 		6309EBB11BB08B2300BEC2D6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		6309EBB31BB08B2300BEC2D6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		6309EBB51BB08B2300BEC2D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -251,10 +251,10 @@
 			isa = PBXGroup;
 			children = (
 				637525AB1BD6E02A009BA56D /* Walcott WatchKit Extension.entitlements */,
-				6309EBAF1BB08B2300BEC2D6 /* InterfaceController.swift */,
+				6309EBAF1BB08B2300BEC2D6 /* StartWorkoutController.swift */,
+				6310DEF71BD945AB00BA4E0C /* WorkoutInterfaceController.swift */,
 				6309EBB11BB08B2300BEC2D6 /* ExtensionDelegate.swift */,
 				6309EBB31BB08B2300BEC2D6 /* NotificationController.swift */,
-				6310DEF71BD945AB00BA4E0C /* WorkoutInterfaceController.swift */,
 				6309EBB51BB08B2300BEC2D6 /* Assets.xcassets */,
 				6309EBB71BB08B2300BEC2D6 /* Info.plist */,
 				6309EBAD1BB08B2300BEC2D6 /* Supporting Files */,
@@ -609,7 +609,7 @@
 				6309EBB41BB08B2300BEC2D6 /* NotificationController.swift in Sources */,
 				6309EBB21BB08B2300BEC2D6 /* ExtensionDelegate.swift in Sources */,
 				6310DEF81BD945AB00BA4E0C /* WorkoutInterfaceController.swift in Sources */,
-				6309EBB01BB08B2300BEC2D6 /* InterfaceController.swift in Sources */,
+				6309EBB01BB08B2300BEC2D6 /* StartWorkoutController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

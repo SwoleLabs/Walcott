@@ -15,15 +15,9 @@ class WorkoutInterfaceController: WKInterfaceController, HKWorkoutSessionDelegat
     let healthStore = HKHealthStore()
     var workoutSession = HKWorkoutSession(activityType: .TraditionalStrengthTraining, locationType: .Indoor)
     
-    init(workoutSession: HKWorkoutSession) {
-        self.workoutSession = workoutSession
-    }
-    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         workoutSession.delegate = self
-        
-        // Configure interface objects here.
     }
 
     override func willActivate() {
