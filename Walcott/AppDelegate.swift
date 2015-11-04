@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let healthStore = HKHealthStore()
-
+    
+    func applicationShouldRequestHealthAuthorization(application: UIApplication) {
+        self.healthStore.handleAuthorizationForExtensionWithCompletion { success, error in
+            
+        }
+        
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         //WatchSessionManager.sharedManager.startSession()
@@ -24,12 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     //prompts user to allow access to healthkit info
-    func applicationShouldRequestHealthAuthorization(application: UIApplication) {
-        self.healthStore.handleAuthorizationForExtensionWithCompletion { success, error in
-            
-        }
-        
-    }
+
 
     func applicationWillResignActive(application: UIApplication) {
         

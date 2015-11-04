@@ -30,8 +30,9 @@
                                 <action selector="endWorkoutButtonWasPressed" destination="LgL-GM-EVp" id="qwj-1o-4I7"/>
                             </connections>
                         </button>
-                        <label width="79" height="69.5" alignment="left" text="Heart Rate" id="2xA-qe-N5p"/>
-                        <timer width="136" height="29.5" alignment="left" id="zaL-Rc-tea"/>
+                        <imageView width="135" height="84" alignment="left" id="lqZ-Cb-Nc6" userLabel="CurrentLift"/>
+                        <label width="61" height="45.5" alignment="left" text="Heart Rate" id="2xA-qe-N5p"/>
+                        <timer width="68" height="29.5" alignment="left" id="zaL-Rc-tea"/>
                     </items>
                     <connections>
                         <outlet property="heartRate" destination="2xA-qe-N5p" id="Yl3-Ji-YXX"/>
@@ -39,7 +40,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="397" y="107"/>
+            <point key="canvasLocation" x="397" y="121.75"/>
         </scene>
     </scenes>
 </document>
