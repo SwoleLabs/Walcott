@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kb0-kc-KlG">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kb0-kc-KlG">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
     </dependencies>
     <scenes>
@@ -30,11 +30,12 @@
                                 <action selector="endWorkoutButtonWasPressed" destination="LgL-GM-EVp" id="qwj-1o-4I7"/>
                             </connections>
                         </button>
-                        <imageView width="135" height="84" alignment="left" id="lqZ-Cb-Nc6" userLabel="CurrentLift"/>
                         <label width="61" height="45.5" alignment="left" text="Heart Rate" id="2xA-qe-N5p"/>
+                        <label alignment="left" text="Label" id="gVV-aL-vf9" userLabel="calLabel"/>
                         <timer width="68" height="29.5" alignment="left" id="zaL-Rc-tea"/>
                     </items>
                     <connections>
+                        <outlet property="calLabel" destination="gVV-aL-vf9" id="QIu-51-Rsh"/>
                         <outlet property="heartRate" destination="2xA-qe-N5p" id="Yl3-Ji-YXX"/>
                         <outlet property="timer" destination="zaL-Rc-tea" id="EyF-f5-aZJ"/>
                     </connections>

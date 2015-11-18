@@ -22,22 +22,4 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK:- HealthKit Permissions
-    @IBAction func authorizeHealthKit(sender: UIButton) {
-        // readable
-        let height = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)!
-        let weight = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
-        let birthday = HKObjectType.characteristicTypeForIdentifier(HKCharacteristicTypeIdentifierDateOfBirth)!
-        let sex = HKObjectType.characteristicTypeForIdentifier(HKCharacteristicTypeIdentifierBiologicalSex)!
-        let readableDataTypes = Set(value: [height, weight, birthday, sex])
-        
-        // shareable
-        let activeBurnType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierActiveEnergyBurned)!
-        let restingBurnType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBasalEnergyBurned)!
-        
-        let shareableDataTypes = Set(value: [activeBurnType, restingBurnType])
-
-        healthStore
-    }
 }

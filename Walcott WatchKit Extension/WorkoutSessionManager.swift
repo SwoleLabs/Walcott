@@ -39,11 +39,14 @@ class WorkoutSessionManager: NSObject, HKWorkoutSessionDelegate {
     var heartRateSamples: [HKQuantitySample] = []
     
     let activeEnergyType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierActiveEnergyBurned)
-    let heartRateType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)
+    
+    let heartRateType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)!
     
     var currentHeartRateQuantity: HKQuantity?
     var currentActiveEnergyQuantity: HKQuantity?
     
+    let heartRateUnit = HKUnit(fromString: "count/min")
+    var heartRateQuery: HKQuery?
 
     weak var delegate: WorkoutSessionManagerDelegate?
     
@@ -145,6 +148,25 @@ class WorkoutSessionManager: NSObject, HKWorkoutSessionDelegate {
 //        return
 //        
 //     }
+    
+    private func createStreamingQuery() -> HKQuery {
+        let predicate = HKQuery.predicateForSamplesWithStartDate(NSDate(), endDate: nil, options: .None)
+        
+        let query = HKAnchoredObjectQuery(type: heartRateType, predicate: predicate, anchor: nil, limit: Int(HKObjectQueryNoLimit)) { (query, samples, deletedObjects, anchor, error) -> Void in
+            //self.addSamples(samples)
+        }
+        query.updateHandler = { (query, samples, deletedObjects, anchor, error) -> Void in
+            //self.addSamples(samples)
+        }
+        
+        return query
+    }
+    
+//    private func addSamples(samples: [HKSample]?) {
+//        guard let samples = samples as? [HKQuantitySample] else { return }
+//        guard let quantity = samples.last?.quantity else { return }
+//        //self.label.setText("\(quantity.doubleValueForUnit(heartRateUnit))")
+//    }
 
 }
 
