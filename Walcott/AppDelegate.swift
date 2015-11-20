@@ -9,6 +9,8 @@
 import UIKit
 import FBSDKCoreKit
 import HealthKit
+import Parse
+import Keys
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,21 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let healthStore = HKHealthStore()
     
     func applicationShouldRequestHealthAuthorization(application: UIApplication) {
-        self.healthStore.handleAuthorizationForExtensionWithCompletion { success, error in
-            
-        }
-        
+        let keys = WalcottKeys()
+        Parse.setApplicationId(keys.parseID(), clientKey: keys.parseKey())
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        //WatchSessionManager.sharedManager.startSession()
 
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
-    
-    //prompts user to allow access to healthkit info
-
 
     func applicationWillResignActive(application: UIApplication) {
         

@@ -5,10 +5,18 @@ use_frameworks!
 target 'Walcott' do
   pod 'Realm', '~> 0.96.0'
   pod 'RealmSwift', '~> 0.96.0'
+  pod 'Parse'
   pod 'FBSDKCoreKit', '~> 4.7.0'
   pod 'FBSDKLoginKit', '~> 4.7.0'
   pod 'FBSDKShareKit', '~> 4.7.0'
 end
+
+plugin 'cocoapods-keys', {
+  :project => "Walcott",
+  :keys => [
+    "parseID",
+    "parseKey"
+  ]}
 
 target 'WalcottTests' do
 

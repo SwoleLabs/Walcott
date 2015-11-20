@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18AB0F6F22D80523924EFF5E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3826629C266971997902E33E /* Pods.framework */; };
 		630944181BD9407500136A56 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630944171BD9407500136A56 /* Interface.storyboard */; };
 		630944191BD9407500136A56 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630944171BD9407500136A56 /* Interface.storyboard */; };
 		6309EB751BB08B2300BEC2D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EB741BB08B2300BEC2D6 /* AppDelegate.swift */; };
@@ -97,6 +98,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3826629C266971997902E33E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACDCE4E67A2496DFF273957 /* Pods-Walcott.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walcott.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Walcott/Pods-Walcott.debug.xcconfig"; sourceTree = "<group>"; };
 		630944171BD9407500136A56 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		6309EB711BB08B2300BEC2D6 /* Walcott.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walcott.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C38F35DC22C81F5777C7AD /* Pods_Walcott.framework in Frameworks */,
+				18AB0F6F22D80523924EFF5E /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +189,7 @@
 			children = (
 				637525AC1BD6E02A009BA56D /* HealthKit.framework */,
 				A5C1D88DEB0F02D13DB5A82A /* Pods_Walcott.framework */,
+				3826629C266971997902E33E /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -542,7 +546,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Walcott/Pods-Walcott-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		638C0DCF1BD971000090267A /* ShellScript */ = {
