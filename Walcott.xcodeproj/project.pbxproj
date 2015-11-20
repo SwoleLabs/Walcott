@@ -27,12 +27,16 @@
 		6334DBD81BB47642002CBA55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334DBD71BB47642002CBA55 /* LoginViewController.swift */; };
 		6334DBDB1BB4767D002CBA55 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334DBDA1BB4767D002CBA55 /* Setup.storyboard */; };
 		6334DBDC1BB4767D002CBA55 /* Setup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6334DBDA1BB4767D002CBA55 /* Setup.storyboard */; };
+		633E9CD61BFE6C4A002A4311 /* StartWorkoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E9CD51BFE6C4A002A4311 /* StartWorkoutButton.swift */; };
 		6351628A1BE94B440041DE38 /* WorkoutSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635162891BE94B440041DE38 /* WorkoutSessionManager.swift */; };
 		635801FB1BD198BE00FB6C87 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801FA1BD198BE00FB6C87 /* Exercise.swift */; };
 		635801FC1BD198BE00FB6C87 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801FA1BD198BE00FB6C87 /* Exercise.swift */; };
 		635801FE1BD1992300FB6C87 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801FD1BD1992300FB6C87 /* Workout.swift */; };
 		635801FF1BD1992300FB6C87 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635801FD1BD1992300FB6C87 /* Workout.swift */; };
 		637525AD1BD6E02A009BA56D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637525AC1BD6E02A009BA56D /* HealthKit.framework */; };
+		63A2A4161BFE4C0B0025E46E /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2A4151BFE4C0B0025E46E /* NewWorkoutViewController.swift */; };
+		63A2A4171BFE4C0B0025E46E /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2A4151BFE4C0B0025E46E /* NewWorkoutViewController.swift */; };
+		63A2A4181BFE4C0B0025E46E /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2A4151BFE4C0B0025E46E /* NewWorkoutViewController.swift */; };
 		92C38F35DC22C81F5777C7AD /* Pods_Walcott.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C1D88DEB0F02D13DB5A82A /* Pods_Walcott.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,11 +127,13 @@
 		6334DBD21BB475AF002CBA55 /* WalcottTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WalcottTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		6334DBD71BB47642002CBA55 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6334DBDA1BB4767D002CBA55 /* Setup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setup.storyboard; sourceTree = "<group>"; };
+		633E9CD51BFE6C4A002A4311 /* StartWorkoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartWorkoutButton.swift; sourceTree = "<group>"; };
 		635162891BE94B440041DE38 /* WorkoutSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutSessionManager.swift; sourceTree = "<group>"; };
 		635801FA1BD198BE00FB6C87 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		635801FD1BD1992300FB6C87 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		637525AB1BD6E02A009BA56D /* Walcott WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Walcott WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		637525AC1BD6E02A009BA56D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		63A2A4151BFE4C0B0025E46E /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
 		A5C1D88DEB0F02D13DB5A82A /* Pods_Walcott.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walcott.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F7A5AE07F19BC5D8A453D /* Pods-Walcott.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walcott.release.xcconfig"; path = "Pods/Target Support Files/Pods-Walcott/Pods-Walcott.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				6334DBDE1BB47695002CBA55 /* Controllers */,
+				633E9CD41BFE6C3A002A4311 /* Views */,
 				635801F91BD198A000FB6C87 /* Models */,
 				6334DBDD1BB47684002CBA55 /* Storyboards */,
 				6334DBDF1BB4769F002CBA55 /* Misc */,
@@ -288,6 +295,7 @@
 				6309EB741BB08B2300BEC2D6 /* AppDelegate.swift */,
 				6309EB761BB08B2300BEC2D6 /* ViewController.swift */,
 				6334DBD71BB47642002CBA55 /* LoginViewController.swift */,
+				63A2A4151BFE4C0B0025E46E /* NewWorkoutViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -302,6 +310,14 @@
 				6334DBD21BB475AF002CBA55 /* WalcottTests-Bridging-Header.h */,
 			);
 			name = Misc;
+			sourceTree = "<group>";
+		};
+		633E9CD41BFE6C3A002A4311 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				633E9CD51BFE6C4A002A4311 /* StartWorkoutButton.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		635801F91BD198A000FB6C87 /* Models */ = {
@@ -582,8 +598,10 @@
 				6334DBD81BB47642002CBA55 /* LoginViewController.swift in Sources */,
 				635801FB1BD198BE00FB6C87 /* Exercise.swift in Sources */,
 				6309EB771BB08B2300BEC2D6 /* ViewController.swift in Sources */,
+				63A2A4161BFE4C0B0025E46E /* NewWorkoutViewController.swift in Sources */,
 				635801FE1BD1992300FB6C87 /* Workout.swift in Sources */,
 				6309EB751BB08B2300BEC2D6 /* AppDelegate.swift in Sources */,
+				633E9CD61BFE6C4A002A4311 /* StartWorkoutButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6309EB8A1BB08B2300BEC2D6 /* WalcottTests.swift in Sources */,
+				63A2A4171BFE4C0B0025E46E /* NewWorkoutViewController.swift in Sources */,
 				635801FC1BD198BE00FB6C87 /* Exercise.swift in Sources */,
 				635801FF1BD1992300FB6C87 /* Workout.swift in Sources */,
 			);
@@ -602,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6309EB951BB08B2300BEC2D6 /* WalcottUITests.swift in Sources */,
+				63A2A4181BFE4C0B0025E46E /* NewWorkoutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
