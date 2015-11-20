@@ -10,7 +10,10 @@ import Foundation
 import RealmSwift
 
 /// `Exercise` manages the what type of exercise was completed (through `ExerciseType`), and how many sets.
-class Exercise: Object {
+class Set: Object {
+    // should never be null!!!!
+    dynamic var workout: Workout?
+    dynamic var weight = 0
     private dynamic var rawExerciseName = String()
     var exerciseName: ExerciseType {
         get {
@@ -21,9 +24,6 @@ class Exercise: Object {
             self.rawExerciseName = newValue.rawValue
         }
     }
-    
-    dynamic var setGoal = 0
-    let sets = List<Set>() // number of completed sets is the size of a given `sets` list.
 }
 
 /// `ExerciseType` maps the different types of exercises that can be recorded.
@@ -33,10 +33,4 @@ enum ExerciseType: String {
     case OverheadPress = "Overhead Press"
     case Deadlift = "Deadlift"
     case BarbellRow = "Barbell Row"
-}
-
-/// `Set` manages how many
-class Set: Object {
-    dynamic var completedNumberOfRepitions = 0
-    dynamic var numberOfRepitionsGoal = 0
 }

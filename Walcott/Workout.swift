@@ -11,5 +11,5 @@ import RealmSwift
 
 class Workout: Object {
     dynamic var exerciseDate = NSDate(timeIntervalSince1970: 1)
-    let exercises = List<Exercise>()
+    let sets = List<Set>()
 }
