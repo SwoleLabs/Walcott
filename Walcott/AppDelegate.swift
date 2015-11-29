@@ -43,13 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         if application.respondsToSelector("registerUserNotificationSettings:") {
-            let userNotificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
-            let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
+            let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
             application.registerUserNotificationSettings(settings)
             application.registerForRemoteNotifications()
         } else {
-            let types = UIRemoteNotificationType.Badge | UIRemoteNotificationType.Alert | UIRemoteNotificationType.Sound
-            application.registerForRemoteNotificationTypes(types)
+//            let settings = UIUserNotificationSettings(forTypes: [.Badge, .Sound], categories: nil)
+            application.registerForRemoteNotifications()
         }
 
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -96,9 +95,9 @@ extension AppDelegate {
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         if error.code == 3010 {
-            println("Push notifications are not supported in the iOS Simulator.")
+            print("Push notifications are not supported in the iOS Simulator.")
         } else {
-            println("application:didFailToRegisterForRemoteNotificationsWithError: %@", error)
+            print("application:didFailToRegisterForRemoteNotificationsWithError: %@", error)
         }
     }
     
