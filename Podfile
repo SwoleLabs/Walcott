@@ -19,11 +19,13 @@ plugin 'cocoapods-keys', {
   ]}
 
 target 'WalcottTests' do
-
+  pod 'Realm', '~> 0.96.0'
+  pod 'RealmSwift', '~> 0.96.0'
 end
 
 target 'WalcottUITests' do
-
+  pod 'Realm', '~> 0.96.0'
+  pod 'RealmSwift', '~> 0.96.0'
 end
 
 target 'Walcott WatchKit App' do
