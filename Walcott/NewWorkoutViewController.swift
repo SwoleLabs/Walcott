@@ -25,6 +25,9 @@ class NewWorkoutViewController: UIViewController {
     @IBAction func cancelButtonWasPressed(sender: AnyObject) {
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
+    @IBAction func startWorkoutButtonWasPressed(sender: AnyObject) {
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -63,12 +63,24 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <state key="normal" title="Start Workout"/>
+                                <connections>
+                                    <action selector="startWorkoutButtonWasPressed:" destination="BPJ-0c-35I" eventType="touchUpInside" id="ozg-EX-4IS"/>
+                                    <segue destination="LA1-mV-JVb" kind="show" id="jLV-ab-byi"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MUz-gP-Etl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="535"/>
+                                <animations/>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MUz-gP-Etl" firstAttribute="leading" secondItem="FtN-Ng-97c" secondAttribute="leading" id="646-5j-q0a"/>
                             <constraint firstItem="cho-ab-cLC" firstAttribute="top" secondItem="hmd-lo-nuh" secondAttribute="bottom" id="Aar-ZV-ZOr"/>
+                            <constraint firstItem="MUz-gP-Etl" firstAttribute="top" secondItem="Tns-NI-x3u" secondAttribute="bottom" id="CLk-ya-Svt"/>
+                            <constraint firstItem="hmd-lo-nuh" firstAttribute="top" secondItem="MUz-gP-Etl" secondAttribute="bottom" id="IZH-mV-bSr"/>
+                            <constraint firstAttribute="trailing" secondItem="MUz-gP-Etl" secondAttribute="trailing" id="Ql2-0H-AGo"/>
                             <constraint firstItem="hmd-lo-nuh" firstAttribute="leading" secondItem="FtN-Ng-97c" secondAttribute="leading" id="RVG-Yz-0iM"/>
                             <constraint firstAttribute="trailing" secondItem="hmd-lo-nuh" secondAttribute="trailing" id="w26-yC-3Lp"/>
                         </constraints>
@@ -85,6 +97,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7w-rm-cih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1922.5" y="798.5"/>
+        </scene>
+        <!--Current Workout View Controller-->
+        <scene sceneID="Vbz-A7-CNB">
+            <objects>
+                <viewController id="LA1-mV-JVb" customClass="CurrentWorkoutViewController" customModule="Walcott" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rA5-HF-spE"/>
+                        <viewControllerLayoutGuide type="bottom" id="QBA-mD-33e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dEF-ia-61t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UUO-jG-LKi">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="bqc-05-zOL">
+                            <connections>
+                                <action selector="saveButtonWasPressed:" destination="LA1-mV-JVb" id="OqO-JJ-LQH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvF-uf-DkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2442.5" y="798.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Ec-ci-Ac4">
